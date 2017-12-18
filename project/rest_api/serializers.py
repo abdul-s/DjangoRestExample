@@ -1,12 +1,6 @@
 from django.contrib.auth.models import User
 from rest_framework import serializers
-from project.api.models import Student
-
-
-class UserSerializer(serializers.HyperlinkedModelSerializer):
-    class Meta:
-        model = User
-        fields = ('url', 'username', 'email', 'groups')
+from project.rest_api.models import Student
 
 class StudentSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
